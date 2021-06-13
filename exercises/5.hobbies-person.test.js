@@ -25,3 +25,6 @@ test("Returns a list of all unique hobbies.", () => {
     "bridge",
   ]);
 });
+
+// Hint
+// Array.reduce

@@ -17,3 +17,6 @@ test("Returns the total sum of ages of all persons.", () => {
 
   expect(result).toBe(172);
 });
+
+// Hint
+// Array.reduce

@@ -16,3 +16,6 @@ test("Returns a list of all youths", () => {
 
   expect(result.length).toBe(2);
 });
+
+// Hint
+// Array.filter

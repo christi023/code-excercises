@@ -23,3 +23,6 @@ test("Returns a sorted list of persons", () => {
     { name: "Sven", age: 68, youth: false },
   ]);
 });
+
+// Hint
+// Array.sort
