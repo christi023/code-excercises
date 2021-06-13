@@ -2,22 +2,27 @@
 
 Some fun exercises to sharpen your JS skills.
 
-The idea of the exercises are to implement all functions to make the tests pass. 
+The idea of the exercises is to implement all functions to make the tests pass. 
 
 ## How to use
 
 1. Install dependencies
-```npm install````
+```bash
+npm install
+```
 
 2. Run tests
 
 Run all tests
-```npm test````
+```bash
+npm test
+```
 
 OR
 
 Run individual tests
-```npx jest 1.filter-person.test.js```
-
-to run that particular test
+```bash
+npx jest 1.filter-person.test.js
+```
+to run that particular test.
 
