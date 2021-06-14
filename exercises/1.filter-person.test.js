@@ -7,7 +7,7 @@ const persons = [
   { name: "Pia", age: 26, youth: false },
 ];
 
-function sortPersons(personList) {
+function listYouths(personList) {
   // Filter out all persons that are youths
 }
 
