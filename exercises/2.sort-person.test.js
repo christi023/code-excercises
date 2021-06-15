@@ -7,12 +7,16 @@ const persons = [
   { name: "Pia", age: 26, youth: false },
 ];
 
-function sortPersons(personList) {
+function sortPersonsOnAge(personList) {
   // Sort persons
+  const result2 = personList.sort((a, b) => a.age - b.age); // sorting the array containing the reduced age in ascending order
+  return result2;
 }
 
+sortPersonsOnAge(persons);
+
 test("Returns a sorted list of persons", () => {
-  const result = sortPersons(persons);
+  const result = sortPersonsOnAge(persons);
 
   expect(result).toEqual([
     { name: "Albin", age: 12, youth: true },
