@@ -8,7 +8,12 @@ const persons = [
 ];
 
 function uniqueHobbies(personList) {
-  // Return a lisst of uniqe hobbies for all persons
+  // Return a list of unique hobbies for all persons
+  const allHobbies = personList.reduce(
+    (acc, currentValue) => acc.concat(currentValue.hobbies),
+    []
+  );
+  console.log(allHobbies);
 }
 
 test("Returns a list of all unique hobbies.", () => {
