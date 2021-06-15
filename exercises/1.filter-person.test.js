@@ -9,7 +9,11 @@ const persons = [
 
 function listYouths(personList) {
   // Filter out all persons that are youths
+  const result1 = personList.filter((obj) => obj.youth === true);
+  return result1;
 }
+
+listYouths(persons); // call the function with the array
 
 test("Returns a list of all youths", () => {
   const result = listYouths(persons);
