@@ -9,7 +9,12 @@ const persons = [
 
 function combinedAge(personList) {
   // Return the combines age of all person
+  //const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  const sum = (currentAge, value) => currentAge + value.age;
+  return personList.reduce(sum, 0); // return 189 => all the ages were added together resulting in a single output
 }
+
+combinedAge(persons);
 
 test("Returns the total sum of ages of all persons.", () => {
   const result = combinedAge(persons);
