@@ -8,13 +8,21 @@ const persons = [
 ];
 
 function uniqueHobbies(personList) {
-  // Return a list of unique hobbies for all persons
-  const allHobbies = personList.reduce(
-    (acc, currentValue) => acc.concat(currentValue.hobbies),
-    []
-  );
-  console.log(allHobbies);
+  let result = personList.reduce((acc, person) => {
+    let hasHobbies = !!acc.find((a) => a.hobbies === person.hobbies);
+    //hasHobbies ? (hasHobbies.hobbies = [...new Set(hasHobbies.hobbies.concat(person.hobbies))) : acc.push(person)
+    if (!hasHobbies) {
+      // return Array.from(new Set(acc.concat(person.hobbies)));
+      return [...new Set(acc.concat(person.hobbies))];
+    }
+
+    return acc;
+  }, []);
+
+  return result;
 }
+
+//  removeDuplicateProducts(persons);
 
 test("Returns a list of all unique hobbies.", () => {
   const result = uniqueHobbies(persons);
