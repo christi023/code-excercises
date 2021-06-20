@@ -8,13 +8,14 @@ const persons = [
 ];
 
 function combinedAge(personList) {
-  // Return the combines age of all person,
-  // -1 Means the person didn't want to give age, so ignore that person
-  const sum = (currentAge, value) => currentAge + value.age;
-  if (sum.value !== -1) {
-    return (sumAges = personList.reduce(sum, 1));
-    // console.log(sumAges);
-  }
+  const ages = personList.reduce(function (sum, value) {
+    if (value.age > 0) {
+      return sum + value.age;
+    }
+    return sum; // -1
+  }, 0);
+
+  return ages;
 }
 
 test("Returns the total sum of ages of all persons.", () => {
